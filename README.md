@@ -9,14 +9,16 @@
 
 2. **For Starting Front end Frontend:**
 
+   **Open New Terminal and Enter Following Command**
+
    ```bash
    cd frontend
    npm start
    ```
 
-   **Open Local Host 3000 for Viewing**
+   **Open Local Host 3000 for Webpage**
 
-3. **Backend:**
+3. **For Starting Backend:**
 
    **Open New Terminal Enter Following Commands**
 
