@@ -19,10 +19,16 @@ const postCard = async (req, res) => {
 
 const getCardByTitle = async (req, res) => {
   const title = req.params.title;
+
   await cardSchema
-    .findOne({ title: title })
-    .then((response) => res.status(200).send(response))
-    .catch((e) => res.status(400).json({ error: e }));
+    .find({ $text: { $search: title + "" } })
+    .then((response) => {
+      res.status(200).send(response);
+    })
+    .catch((e) => {
+      console.log(e);
+      res.status(400).json({ error: e });
+    });
 };
 
 const getAllCards = async (req, res) => {
